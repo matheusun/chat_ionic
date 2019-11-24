@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Chat Ionic
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+    <ion-row size="3">
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-label>Categoria</ion-label>
+            <ion-select [(ngModel)]="categoria" (ionChange)="categorySelected(categoria)" placeholder="Diversos">
+              <ion-option value="Cinema">Cinema</ion-option>
+              <ion-option value="Esportes">Esportes</ion-option>
+              <ion-option default value="Diversos">Diversos</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <div>
+    <ion-row size="3">
+      <ion-col>
+        <ion-item>
+          <ion-label fixed>Username</ion-label>
+          <ion-input type="text" #email></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Senha</ion-label>
+          <ion-input type="password" #password></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row><ion-col></ion-col></ion-row><ion-row><ion-col></ion-col></ion-row>
+    <ion-row>
+      <ion-col>
+          <button col-12 ion-button center (click)="login()">ENTRAR</button>
+      </ion-col>
+    </ion-row>
+    <ion-row style="text-align: center; margin-top: 32px; color: gray;">
+        <ion-col>
+            ou cadastre a conta acima clicando no botão abaixo
+        </ion-col>
+      </ion-row>
+    <ion-row>
+        <ion-col>
+            <button col-12 ion-button center (click)="cadastro()">CADASTRAR</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>
